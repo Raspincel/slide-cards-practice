@@ -40,6 +40,10 @@ export const StyledContainer = styled.main`
         .aux-previous {
             top: -100%; 
             animation-name: aux-previous;
+
+            div {
+                background-color: blue;
+            }
         }
 
         .aux-next {

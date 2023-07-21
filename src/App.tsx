@@ -58,14 +58,14 @@ function App() {
           <StyledContainer>
             <div className="cards-container">
 
-                <div className={`cards auxiliar ${pageDirection === "previous" ? "aux-previous" : "aux-next"}`} key={String(toggleAnimation)}>
+                <div className={`cards auxiliar ${pageDirection === "previous" ? "aux-previous" : "aux-next"}`} key={String(toggleAnimation) + String(Math.random())}>
                   {auxiliarUsers?.map((user, index)=> {
                     return <Card key={index} name={user.name} email={user.email}/>
                   })}
                 </div>
 
                 <div className={`cards ${pageDirection === "previous" ? "main-prev" : "main-next"
-              }`} key={String(toggleAnimation)} >
+              }`} key={String(toggleAnimation) + String(Math.random())} >
                 {currentUsers?.map((user, index)=> {
                   return <Card key={index} name={user.name} email={user.email}/>
                 })}
